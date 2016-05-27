@@ -1,0 +1,293 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="top"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/colorDarkPrimary">
+
+    </LinearLayout>
+
+
+    <TabHost
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:id="@+id/tabHost"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:background="#ffffff"
+                android:layout_height="wrap_content"></TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+          <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+               >
+
+
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:baselineAligned="true">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Préstamo a:"
+                        android:id="@+id/textView"
+                        android:textColor="#ffffff"
+                        android:textSize="20dp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/fld_persona"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="14dp"
+                        android:hint="Ejemplo: Gerardo"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nombre del objeto prestado:"
+                        android:id="@+id/txtobj"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:editable="false"
+                        android:textSize="20dp"
+                         />
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/fld_nombreobjeto"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="14dp"
+                        android:hint="Ejemplo: Harry Potter"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tipo de objeto prestado: "
+                        android:textColor="#ffffff"
+                        android:textSize="20dp"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:id="@+id/field_tipo"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="14dp"
+                        android:hint="Eemplo: Libro"/>
+
+                    </LinearLayout>
+
+                    <!--SEGUNDA PARTE-->
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:background="#ffffff"
+                        android:layout_marginBottom="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:text="Fecha de prestamo: "
+                            android:id="@+id/txt_fechap"
+                            android:textColor="#00BCD4"
+                            android:textSize="18dp"
+                            android:textStyle="bold"
+                            android:elegantTextHeight="false"
+                            android:layout_toStartOf="@+id/btnEditarPre"
+                            android:textIsSelectable="false" />
+                          <LinearLayout
+                             android:layout_width="match_parent"
+                             android:layout_height="55dp">
+
+                              <Button
+                                  android:layout_width="30dp"
+                                  android:layout_height="30dp"
+                                  android:layout_marginLeft="15dp"
+                                  android:layout_marginTop="10dp"
+                                  android:id="@+id/btnEditarPre"
+                                  android:background="@drawable/cal"
+
+                                  android:layout_below = "@id/txt_fechap"
+
+                                  />
+                              <LinearLayout
+                                  android:layout_width="242dp"
+                                  android:layout_height="42dp"
+                                  android:layout_marginRight="10dp"
+                                  android:background="#0097A7"
+                                  android:layout_marginLeft="20dp">
+                               <TextView
+
+                                   android:layout_width="240dp"
+                                   android:layout_height="40dp"
+                                   android:background="#ffffff"
+                                   android:layout_marginLeft="1dp"
+                                   android:layout_marginRight="1dp"
+                                   android:layout_marginTop="1dp"
+                                   android:layout_marginBottom="1dp"
+                                android:id="@+id/lblFechaPrIn"
+                                android:layout_alignEnd="@+id/txt_fechap"
+                                android:textColor="#00BCD4"
+                                android:textSize="27dp"
+                                android:textIsSelectable="false" />
+                                 </LinearLayout>
+
+
+                             </LinearLayout>
+
+                             <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:text="Fecha de devolución:"
+                            android:id="@+id/lblFechaRe"
+                            android:textColor="#00BCD4"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp">
+
+                            <Button
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/cal"
+                                android:id="@+id/btnEditarDev"
+                                />
+                              <LinearLayout
+                                  android:layout_width="242dp"
+                                  android:layout_height="42dp"
+                                  android:layout_marginRight="10dp"
+                                  android:background="#0097A7"
+                                  android:layout_marginLeft="20dp">
+                            <TextView
+                                android:layout_width="240dp"
+                                android:layout_height="40dp"
+                                android:background="#ffffff"
+                                android:layout_marginLeft="1dp"
+                                android:layout_marginRight="1dp"
+                                android:layout_marginTop="1dp"
+                                android:layout_marginBottom="1dp"
+                                android:id="@+id/lblFechaDevIn"
+                                android:layout_toStartOf="@+id/btnEditarDev"
+                                android:textColor="#00BCD4"
+                                android:textSize="27dp"
+                                android:layout_alignParentBottom="true" />
+                                  </LinearLayout>
+                        </LinearLayout>
+
+                        </LinearLayout>
+
+                    <!--AQUI TERMINA-->
+
+
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Registrar préstamo"
+                        android:textSize="15dp"
+                        android:shadowColor="#000000"
+                        android:textColor="#ffffff"
+                        android:background="#0097A7"
+                        android:id="@+id/btnRegistrar"
+                        android:layout_marginTop="5dp" />
+
+                   </LinearLayout>
+
+                    </ScrollView>
+
+
+                    <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Toca el registro para marcarlo como devuelto. El registro devuelto se mostrará en 'Préstamos Devueltos'"
+                        android:background="#B2EBF2" />
+
+                    <ListView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/lst_verPendientes"
+                        android:background="#F5F6CE"/>
+                  </LinearLayout>
+
+                  <LinearLayout
+                    android:id="@+id/tab3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="¿Marcaste por error el prestamo como devuelto?. No te preocupes, vuelve a tocar el registro para devolverlo a 'Préstamos Pendientes'"
+                        android:background="#B2EBF2" />
+
+                    <ListView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/lst_verRegresados"
+                        android:background="#A9F5A9"/>
+
+                       </LinearLayout>
+
+
+
+
+                     </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</RelativeLayout>
